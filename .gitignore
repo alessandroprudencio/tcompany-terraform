@@ -1,0 +1,25 @@
+# Log files
+*.log
+
+# Directory-based state files
+*.tfstate
+*.tfstate.*
+
+# Backup files
+*.tfstate.backup
+
+# Directory-based state files
+.terraform/
+
+# Ignored module files
+.terraformignore
+
+# Binary plan files
+*.tfplan
+*.tfplan.*
+
+# Crash log files
+crash.log
+
+# Sensitive variable files
+# *.tfvars
