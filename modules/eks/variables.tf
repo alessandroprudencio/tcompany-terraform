@@ -1,3 +1,7 @@
+variable "vpc_id" {
+  type = string
+}
+
 variable "prefix" {
   type = string
 }
@@ -26,6 +30,7 @@ variable "max_unavailable" {
   type = number
 }
 
-variable "vpc_cidr_block" {
-  type = string
+variable "subnet_ids" {
+  type = set(string)
+
 }

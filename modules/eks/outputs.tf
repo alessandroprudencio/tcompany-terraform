@@ -5,10 +5,10 @@ clusters:
 - cluster:
     certificate-authority-data: ${aws_eks_cluster.cluster.certificate_authority[0].data}
     server: ${aws_eks_cluster.cluster.endpoint}
-  name: development
+  name: kubernetes
 contexts:
 - context:
-    cluster: development
+    cluster: kubernetes
     user: "${aws_eks_cluster.cluster.name}"
   name: "${aws_eks_cluster.cluster.name}"
 current-context: "${aws_eks_cluster.cluster.name}"
@@ -26,7 +26,6 @@ users:
        - "${aws_eks_cluster.cluster.name}"
 KUBECONFIG
 }
-
 
 resource "local_file" "kubeconfig" {
   filename = "kubeconfig"
