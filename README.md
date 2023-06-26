@@ -33,11 +33,9 @@ Before you begin, ensure that you have the following prerequisites installed on 
 
 7. Verify that your `kubectl` is connected to the cluster by running `kubectl get nodes`.
 
-8. Deploy the Nginx server on the Kubernetes cluster by running `kubectl apply -f nginx.yaml`.
+8. Verify that the Nginx server is running by checking the pods with `kubectl create deploy nginx --image=nginx`.
 
-9. Verify that the Nginx server is running by checking the pods with `kubectl get pods`.
-
-10. Access the Nginx server by running `kubectl port-forward pod/nginx-<pod_id> 8181:80`. Replace `<pod_id>` with the actual ID of the Nginx pod obtained from the previous step. Once the port forwarding is established, you can access the Nginx server locally at `http://localhost:8181`.
+9. Access the Nginx server by running `kubectl port-forward pod/nginx-<pod_id> 8181:80`. Replace `<pod_id>` with the actual ID of the Nginx pod obtained from the previous step. Once the port forwarding is established, you can access the Nginx server locally at `http://localhost:8181`.
 
 ## Cluster Destruction
 
